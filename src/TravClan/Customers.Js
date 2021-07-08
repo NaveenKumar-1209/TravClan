@@ -13,7 +13,7 @@ const Customers = ({posts, loading}) => {
             posts.map((curElem)=>{
                 return(
                     <>
-                    <li style ={{display:"inline-block", padding:"30px", textAlign:"center"}} >
+                    <li style ={{display:"inline-block", padding:"75px", textAlign:"center"}} >
                     <h4>{curElem.firstname} {curElem.lastname}</h4>
                     <img style={{width:"150px", height:"200px"}} src={curElem.avatarUrl} />
                     <p>{curElem.email}</p>
