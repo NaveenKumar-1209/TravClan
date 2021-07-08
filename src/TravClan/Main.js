@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
-import Header from './Header';
+import Posts from './Posts.Js';
 const Main = () => {
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -11,7 +11,7 @@ const Main = () => {
         const fetchPosts = async () =>{
             setLoading(true);
             const res = await axios.get("https://intense-tor-76305.herokuapp.com/merchants");
-            setPosts(res.data);
+            setPosts(res.data.bids);
             setLoading(false);
         }
         fetchPosts();
@@ -19,7 +19,7 @@ const Main = () => {
         return (
         <div className = "Container mt-5">
             <h1 className="text-primary mb-3">TravClan</h1>
-            <Header posts={posts} loading={loading} />
+            <Posts posts={posts} loading={loading} />
         </div>
     )
 }
