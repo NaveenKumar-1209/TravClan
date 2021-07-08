@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
-import Posts from './Posts.Js';
+import Customers from './Customers.Js';
 const Main = () => {
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -19,7 +19,7 @@ const Main = () => {
         return (
         <div className = "Container mt-5">
             <h1 className="text-primary mb-3">TravClan</h1>
-            <Posts posts={posts} loading={loading} />
+            <Customers posts={posts} loading={loading} />
         </div>
     )
 }

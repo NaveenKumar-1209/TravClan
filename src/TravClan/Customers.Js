@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const Posts = ({posts, loading}) => {
+const Customers = ({posts, loading}) => {
     if(loading){
     return <h2>Loading....</h2>;
     }
@@ -14,5 +14,5 @@ const Posts = ({posts, loading}) => {
     </ul>;
 };
 
-export default Posts;
+export default Customers;
 
