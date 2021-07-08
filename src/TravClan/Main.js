@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
-import Customers from './Customers.Js';
+import Customers from './Customers';
 const Main = () => {
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -11,7 +11,7 @@ const Main = () => {
         const fetchPosts = async () =>{
             setLoading(true);
             const res = await axios.get("https://intense-tor-76305.herokuapp.com/merchants");
-            setPosts(res.data.bids);
+            setPosts(res.data);
             setLoading(false);
         }
         fetchPosts();
