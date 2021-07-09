@@ -5,6 +5,7 @@
     display:flex;
     flex-direction: left;
     justify-content: "center";
+    margin-top:20px;
 }
 .paginationBttn a{
     padding:10px;
