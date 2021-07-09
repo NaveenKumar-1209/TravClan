@@ -1,0 +1,16 @@
+.paginationBttn{
+    width:30vw;
+    height:40px;
+    list-style: none;
+    display:flex;
+    flex-direction: left;
+    justify-content: "center";
+}
+.paginationBttn a{
+    padding:10px;
+    margin:8px;
+    border-radius: 5px;
+    border:1px solid #1840f2;
+    color:#1840f2;
+    cursor: pointer;
+}

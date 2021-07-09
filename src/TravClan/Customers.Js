@@ -32,7 +32,6 @@ const Customers = ({posts, loading}) => {
                     </>
                 )    
             })
-
         }
         </div>
      )};
