@@ -1,23 +1,28 @@
 import React from 'react';
 import Switch from '@material-ui/core/Switch';
 
-function Switches() {
-  const [state, setState] = React.useState({
-    checkedA: true,
-  });
+function Switches({Max_amount, Min_amount}) {
+  const [show, setShow] = React.useState(true);
 
   const handleChange = (event) => {
-    setState({ ...state, [event.target.name]: event.target.checked });
+    setShow(event.target.checked);
   };
 
   return (
     <div>
       <Switch
-        checked={state.checkedA}
+        checked={show}
         onChange={handleChange}
-        name="checkedA"
+        name="checked"
         inputProps={{ 'aria-label': 'primary checkbox' }}
       />
+      {
+        show == true ? <p style ={{minWidth:"300px", color:"red"}}>Maximum bids : {Max_amount}</p> : 
+        <p style ={{minWidth:"300px", color:"red"}}>Minimum bids : {Min_amount}</p>
+      }
+      
+      
+      
     </div>
   );
 }

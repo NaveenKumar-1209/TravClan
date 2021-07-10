@@ -60,9 +60,7 @@ const Customers = ({ posts, loading }) => {
                     );
                   })}
                 </li>
-                <Switches  />
-                <li style={{minWidth:"300px", color:"red"}}>Max Bids : {Max_amount}</li>
-                <li style={{minWidth:"300px", color:"red"}}>Min Bids : {Min_amount}</li>
+                <Switches Max_amount={Max_amount} Min_amount={Min_amount} />
               </ul>
             </div>
           </>
